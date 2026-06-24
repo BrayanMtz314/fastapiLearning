@@ -25,6 +25,11 @@ class UserResponse(UserBase):
     image_path: str
 
 
+class UserUpdate(BaseModel):
+    username: str | None = Field(default=None, min_length=1, max_length=50)
+    email: EmailStr | None = Field(default=None, max_length=120)
+    image_file: str | None = Field(default=None, min_length=1, max_length=200)
+
 
 
 # <----------Schema for Post (Base, Responses, creations)-------------->
@@ -38,6 +43,11 @@ class PostBase(BaseModel):
 class PostCreate(PostBase):
     user_id: int # Temporary
 
+
+class PostUpdate(BaseModel):
+    title: str | None = Field(default=None, min_length=1, max_length=100)
+    content: str | None = Field(default=None, min_length=1)
+
 # this helps to return a post response with more data as id and date
 class PostResponse(PostBase):
     model_config = ConfigDict(from_attributes=True)
@@ -46,3 +56,5 @@ class PostResponse(PostBase):
     user_id: int
     date_posted: datetime
     author: UserResponse  
+
+

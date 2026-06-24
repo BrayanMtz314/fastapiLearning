@@ -18,7 +18,10 @@ class User(Base):
         nullable=True,
         default=None,
     )
-    posts: Mapped[list[Post]] = relationship(back_populates="author")
+    posts: Mapped[list[Post]] = relationship(
+        back_populates="author", 
+        cascade="all, delete-orphan"
+    )
 
     # this is a best practice in backend in general
     # This return a custom picture if it exists or the defauld image
