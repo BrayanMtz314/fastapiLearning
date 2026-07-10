@@ -48,7 +48,7 @@ class PostBase(BaseModel):
 # The best practice is to use another class that inherits from the base model.
 # this helps for more flexibility
 class PostCreate(PostBase):
-    user_id: int # Temporary
+    pass
 
 
 class PostUpdate(BaseModel):
