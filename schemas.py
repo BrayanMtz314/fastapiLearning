@@ -65,3 +65,13 @@ class PostResponse(PostBase):
     author: UserPublic  
 
 
+## Paginated Post Response Schema
+class PaginatedPostsResponse(BaseModel):
+    posts: list[PostResponse]
+    total: int
+    skip: int
+    limit: int
+    has_more: bool
+
+
+
