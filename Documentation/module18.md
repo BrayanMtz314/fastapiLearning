@@ -23,3 +23,10 @@ async def health_check(db: Annotated[AsyncSession, Depends(get_db)]):
 ```
 
 
+- To deploy our application we need to have uploaded the code in github, afortunaly we  already have this code in github, if you don't have, you need to create a unique repository to deploy this branch.
+
+
+- Now, to carry out the configuration on Linode, we have a detailed list of the steps to follow in this file: [**setup_vps.txt**](../setup_vps.txt)
+
+# Return to Readme.md
+[**Readme.md**](../README.md)
