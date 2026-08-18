@@ -21,6 +21,7 @@ Modules:
 - [**Module 16: AWS S3 and Boto3 - Moving File Uploads to the Cloud**](/Documentation/module16.md)
 - [**Module 17: Testing The API - Pytest, Fixtures & Mocking**](/Documentation/module17.md)
 - [**Module 18: Deploy To A VPS - Security, NGINX, SSL & Custom Domain**](/Documentation/module18.md)
+- [**Module 19: Deploy with Docker - Serverless Containers and Custom Domain**](/Documentation/module19.md)
 
 
 
